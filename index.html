@@ -37,6 +37,7 @@
     
     <div id="result" class="hidden">
         <h2>Résultat final: <span id="score"></span>/30</h2>
+        <button onclick="restartTest()">Relancer le test</button>
     </div>
 
     <script>
@@ -53,7 +54,10 @@
         async function startTest() {
             await fetchVerbs();
             selectedVerbs = verbs.sort(() => 0.5 - Math.random()).slice(0, 10);
+            score = 0;
+            currentQuestion = 0;
             document.getElementById('home').classList.add('hidden');
+            document.getElementById('result').classList.add('hidden');
             document.getElementById('countdown').classList.remove('hidden');
             let count = 5;
             document.getElementById('timer').innerText = count;
@@ -103,6 +107,11 @@
             document.getElementById('quiz').classList.add('hidden');
             document.getElementById('result').classList.remove('hidden');
             document.getElementById('score').innerText = score;
+        }
+
+        function restartTest() {
+            document.getElementById('result').classList.add('hidden');
+            startTest();
         }
     </script>
 </body>
