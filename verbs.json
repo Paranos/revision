@@ -45,5 +45,22 @@
     {"fr": "voler (air)", "en": "fly", "past": "flew", "pastParticiple": "flown"},
     {"fr": "grander", "en": "grow", "past": "grew", "pastParticiple": "grown"},
     {"fr": "savoir", "en": "know", "past": "knew", "pastParticiple": "known"},
-    {"fr": "jeter (lancer)", "en": "throw", "past": "threw", "pastParticiple": "thrown"}
+    {"fr": "jeter (lancer)", "en": "throw", "past": "threw", "pastParticiple": "thrown"},
+    {"fr": "commencer", "en": "begin", "past": "began", "pastParticiple": "begun"},
+    {"fr": "boire", "en": "drink", "past": "drank", "pastParticiple": "drunk"},
+    {"fr": "sonner", "en": "ring", "past": "rang", "pastParticiple": "rung"},
+    {"fr": "chanter", "en": "sing", "past": "sang", "pastParticiple": "sung"},
+    {"fr": "nager", "en": "swim", "past": "swam", "pastParticiple": "swum"},
+    {"fr": "casser", "en": "break", "past": "broke", "pastParticiple": "broken"},
+    {"fr": "choisir", "en": "choose", "past": "chose", "pastParticiple": "chosen"},
+    {"fr": "geler", "en": "freeze", "past": "froze", "pastParticiple": "frozen"},
+    {"fr": "oublier", "en": "forget", "past": "forgot", "pastParticiple": "forgotten"},
+    {"fr": "obtenir", "en": "get", "past": "got", "pastParticiple": "got"},
+    {"fr": "parler", "en": "speak", "past": "spoke", "pastParticiple": "spoken"},
+    {"fr": "voler", "en": "steal", "past": "stole", "pastParticiple": "stolen"},
+    {"fr": "manger", "en": "eat", "past": "ate", "pastParticiple": "eaten"},
+    {"fr": "dessiner", "en": "draw", "past": "drew", "pastParticiple": "drawn"},
+    {"fr": "conduire", "en": "drive", "past": "drove", "pastParticiple": "driven"},
+    {"fr": "tomber", "en": "fall", "past": "fell", "pastParticiple": "fallen"},
+    {"fr": "interdire", "en": "forbid", "past": "forbade", "pastParticiple": "forbidden"}
 ]
