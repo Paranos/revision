@@ -36,5 +36,14 @@
     {"fr": "perdre", "en": "lose", "past": "lost", "pastParticiple": "lost"},
     {"fr": "rencontrer", "en": "meet", "past": "met", "pastParticiple": "met"},
     {"fr": "envoyer", "en": "send", "past": "sent", "pastParticiple": "sent"},
-    {"fr": "tirer", "en": "shoot", "past": "shot", "pastParticiple": "shot"}
+    {"fr": "tirer", "en": "shoot", "past": "shot", "pastParticiple": "shot"},
+    {"fr": "apporter", "en": "bring", "past": "brought", "pastParticiple": "brought"},
+    {"fr": "attraper", "en": "catch", "past": "caught", "pastParticiple": "caught"},
+    {"fr": "se battre", "en": "fight", "past": "fought", "pastParticiple": "fought"},
+    {"fr": "enseigner", "en": "teach", "past": "tought", "pastParticiple": "tought"},
+    {"fr": "penser", "en": "think", "past": "thought", "pastParticiple": "thought"},
+    {"fr": "voler (air)", "en": "fly", "past": "flew", "pastParticiple": "flown"},
+    {"fr": "grander", "en": "grow", "past": "grew", "pastParticiple": "grown"},
+    {"fr": "savoir", "en": "know", "past": "knew", "pastParticiple": "known"},
+    {"fr": "jeter (lancer)", "en": "throw", "past": "threw", "pastParticiple": "thrown"}
 ]
