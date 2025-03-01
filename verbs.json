@@ -22,19 +22,19 @@
     {"fr": "dépenser / passer du temps", "en": "spend", "past": "spent", "pastParticiple": "spent"},
     {"fr": "raconter", "en": "tell", "past": "told", "pastParticiple": "told"},
     {"fr": "comprendre", "en": "understand", "past": "understood", "pastParticiple": "understood"},
-    {"fr": "gagner", "en": "win", "past": "won", "pastParticiple": "won"}
-    {"fr": "jeter", "en": "cast", "past": "cast", "pastParticiple": "cast"}
-    {"fr": "couper", "en": "cut", "past": "cut", "pastParticiple": "cut"}
-    {"fr": "frapper", "en": "hit", "past": "hit", "pastParticiple": "hit"}
-    {"fr": "lire", "en": "read", "past": "read", "pastParticiple": "read"}
-    {"fr": "mettre", "en": "put", "past": "put", "pastParticiple": "put"}
-    {"fr": "construire", "en": "build", "past": "built", "pastParticiple": "built"}
-    {"fr": "rêver", "en": "dream", "past": "dreamt", "pastParticiple": "dreamt"}
-    {"fr": "ressentir", "en": "feel", "past": "felt", "pastParticiple": "felt"}
-    {"fr": "garder", "en": "keep", "past": "kept", "pastParticiple": "kept"}
-    {"fr": "quitter", "en": "leave", "past": "left", "pastParticiple": "left"}
-    {"fr": "perdre", "en": "lose", "past": "lost", "pastParticiple": "lost"}
-    {"fr": "rencontrer", "en": "meet", "past": "met", "pastParticiple": "met"}
-    {"fr": "envoyer", "en": "send", "past": "sent", "pastParticiple": "sent"}
+    {"fr": "gagner", "en": "win", "past": "won", "pastParticiple": "won"},
+    {"fr": "jeter", "en": "cast", "past": "cast", "pastParticiple": "cast"},
+    {"fr": "couper", "en": "cut", "past": "cut", "pastParticiple": "cut"},
+    {"fr": "frapper", "en": "hit", "past": "hit", "pastParticiple": "hit"},
+    {"fr": "lire", "en": "read", "past": "read", "pastParticiple": "read"},
+    {"fr": "mettre", "en": "put", "past": "put", "pastParticiple": "put"},
+    {"fr": "construire", "en": "build", "past": "built", "pastParticiple": "built"},
+    {"fr": "rêver", "en": "dream", "past": "dreamt", "pastParticiple": "dreamt"},
+    {"fr": "ressentir", "en": "feel", "past": "felt", "pastParticiple": "felt"},
+    {"fr": "garder", "en": "keep", "past": "kept", "pastParticiple": "kept"},
+    {"fr": "quitter", "en": "leave", "past": "left", "pastParticiple": "left"},
+    {"fr": "perdre", "en": "lose", "past": "lost", "pastParticiple": "lost"},
+    {"fr": "rencontrer", "en": "meet", "past": "met", "pastParticiple": "met"},
+    {"fr": "envoyer", "en": "send", "past": "sent", "pastParticiple": "sent"},
     {"fr": "tirer", "en": "shoot", "past": "shot", "pastParticiple": "shot"}
 ]
