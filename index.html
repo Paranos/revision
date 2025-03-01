@@ -15,6 +15,14 @@
             text-align: center;
         }
         .hidden { display: none; }
+        table {
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+        }
     </style>
 </head>
 <body>
@@ -37,6 +45,17 @@
     
     <div id="result" class="hidden">
         <h2>Résultat final: <span id="score"></span>/30</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Verbe (FR)</th>
+                    <th>Infinitif</th>
+                    <th>Passé simple</th>
+                    <th>Participe passé</th>
+                </tr>
+            </thead>
+            <tbody id="resultTable"></tbody>
+        </table>
         <button onclick="restartTest()">Relancer le test</button>
     </div>
 
@@ -45,6 +64,7 @@
         let currentQuestion = 0;
         let score = 0;
         let selectedVerbs = [];
+        let results = [];
 
         async function fetchVerbs() {
             const response = await fetch('verbs.json');
@@ -56,6 +76,7 @@
             selectedVerbs = verbs.sort(() => 0.5 - Math.random()).slice(0, 10);
             score = 0;
             currentQuestion = 0;
+            results = [];
             document.getElementById('home').classList.add('hidden');
             document.getElementById('result').classList.add('hidden');
             document.getElementById('countdown').classList.remove('hidden');
@@ -95,9 +116,18 @@
             const past = document.getElementById('past').value.trim();
             const pastPart = document.getElementById('pastParticiple').value.trim();
             
-            if (inf.toLowerCase() === verb.en.toLowerCase()) score++;
-            if (past.toLowerCase() === verb.past.toLowerCase()) score++;
-            if (pastPart.toLowerCase() === verb.pastParticiple.toLowerCase()) score++;
+            let infScore = inf.toLowerCase() === verb.en.toLowerCase() ? 1 : 0;
+            let pastScore = past.toLowerCase() === verb.past.toLowerCase() ? 1 : 0;
+            let pastPartScore = pastPart.toLowerCase() === verb.pastParticiple.toLowerCase() ? 1 : 0;
+            
+            score += infScore + pastScore + pastPartScore;
+            
+            results.push({
+                fr: verb.fr,
+                inf: `${inf} (${infScore})`,
+                past: `${past} (${pastScore})`,
+                pastPart: `${pastPart} (${pastPartScore})`
+            });
             
             currentQuestion++;
             showQuestion();
@@ -107,6 +137,17 @@
             document.getElementById('quiz').classList.add('hidden');
             document.getElementById('result').classList.remove('hidden');
             document.getElementById('score').innerText = score;
+            let resultTable = document.getElementById('resultTable');
+            resultTable.innerHTML = '';
+            results.forEach(result => {
+                let row = `<tr>
+                    <td>${result.fr}</td>
+                    <td>${result.inf}</td>
+                    <td>${result.past}</td>
+                    <td>${result.pastPart}</td>
+                </tr>`;
+                resultTable.innerHTML += row;
+            });
         }
 
         function restartTest() {
