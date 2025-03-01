@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Verbes Irréguliers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <div id="home">
+        <h1>Démarrer un test</h1>
+        <button onclick="startTest()">Démarrer</button>
+    </div>
+    
+    <div id="countdown" class="hidden">
+        <h1 id="timer">5</h1>
+    </div>
+    
+    <div id="quiz" class="hidden">
+        <h2 id="question"></h2>
+        <label>Infinitif: <input type="text" id="infinitive"></label><br>
+        <label>Passé simple: <input type="text" id="past"></label><br>
+        <label>Participe passé: <input type="text" id="pastParticiple"></label><br>
+        <button onclick="nextQuestion()">Valider</button>
+    </div>
+    
+    <div id="result" class="hidden">
+        <h2>Résultat final: <span id="score"></span>/30</h2>
+    </div>
+
+    <script>
+        let verbs = [];
+        let currentQuestion = 0;
+        let score = 0;
+        let selectedVerbs = [];
+
+        async function fetchVerbs() {
+            const response = await fetch('verbs.json');
+            verbs = await response.json();
+        }
+
+        async function startTest() {
+            await fetchVerbs();
+            selectedVerbs = verbs.sort(() => 0.5 - Math.random()).slice(0, 10);
+            document.getElementById('home').classList.add('hidden');
+            document.getElementById('countdown').classList.remove('hidden');
+            let count = 5;
+            document.getElementById('timer').innerText = count;
+            const interval = setInterval(() => {
+                count--;
+                document.getElementById('timer').innerText = count;
+                if (count === 0) {
+                    clearInterval(interval);
+                    startQuiz();
+                }
+            }, 1000);
+        }
+
+        function startQuiz() {
+            document.getElementById('countdown').classList.add('hidden');
+            document.getElementById('quiz').classList.remove('hidden');
+            showQuestion();
+        }
+
+        function showQuestion() {
+            if (currentQuestion >= selectedVerbs.length) {
+                showResult();
+                return;
+            }
+            const verb = selectedVerbs[currentQuestion];
+            document.getElementById('question').innerText = `Comment écrit-on le verbe : ${verb.fr} ?`;
+            document.getElementById('infinitive').value = '';
+            document.getElementById('past').value = '';
+            document.getElementById('pastParticiple').value = '';
+        }
+
+        function nextQuestion() {
+            const verb = selectedVerbs[currentQuestion];
+            const inf = document.getElementById('infinitive').value.trim();
+            const past = document.getElementById('past').value.trim();
+            const pastPart = document.getElementById('pastParticiple').value.trim();
+            
+            if (inf.toLowerCase() === verb.en.toLowerCase()) score++;
+            if (past.toLowerCase() === verb.past.toLowerCase()) score++;
+            if (pastPart.toLowerCase() === verb.pastParticiple.toLowerCase()) score++;
+            
+            currentQuestion++;
+            showQuestion();
+        }
+
+        function showResult() {
+            document.getElementById('quiz').classList.add('hidden');
+            document.getElementById('result').classList.remove('hidden');
+            document.getElementById('score').innerText = score;
+        }
+    </script>
+</body>
+</html>
