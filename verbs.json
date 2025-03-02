@@ -62,5 +62,11 @@
     {"fr": "dessiner", "en": "draw", "past": "drew", "pastParticiple": "drawn"},
     {"fr": "conduire", "en": "drive", "past": "drove", "pastParticiple": "driven"},
     {"fr": "tomber", "en": "fall", "past": "fell", "pastParticiple": "fallen"},
-    {"fr": "interdire", "en": "forbid", "past": "forbade", "pastParticiple": "forbidden"}
+    {"fr": "interdire", "en": "forbid", "past": "forbade", "pastParticiple": "forbidden"},
+    {"fr": "cacher", "en": "hide", "past": "hid", "pastParticiple": "hidden"},
+    {"fr": "monter (à cheval / à vélo)", "en": "ride", "past": "rode", "pastParticiple": "ridden"},
+    {"fr": "voir", "en": "see", "past": "saw", "pastParticiple": "seen"},
+    {"fr": "prendre", "en": "take", "past": "took", "pastParticiple": "taken"},
+    {"fr": "réveiller", "en": "wake up", "past": "woke up", "pastParticiple": "woken up"},
+    {"fr": "écrire", "en": "write", "past": "wrote", "pastParticiple": "written"}
 ]
